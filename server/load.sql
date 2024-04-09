@@ -14,7 +14,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(user_id, is_admin, Fname, Minit, Lname, email, password);
+(user_id, email, is_admin, Fname, Minit, Lname, password);
 
 -- Load data for Books
 LOAD DATA INFILE './books.csv'
