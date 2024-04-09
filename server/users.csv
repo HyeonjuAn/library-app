@@ -10,7 +10,7 @@ user_id, email, is_admin, Firstname, Middle Name, Lastname
 9, william.moore@gmail.com, False, William, Isa, Moore
 10, elizabeth.taylor@gmail.com, False, Elizabeth, Jack, Taylor
 11, david.anderson@gmail.com, True, David, Karl, Anderson
-12, barbara.thomas@gmail.com, True, Barbara, Lindesy Thomas
+12, barbara.thomas@gmail.com, True, Barbara, Lindesy, Thomas
 13, richard.jackson@gmail.com, True, Richard, Mike, Jackson
 14, susan.white@gmail.com, False, Susan, Norman, White
 15, joseph.harris@gmail.com, True, Joseph, Orlando, Harris
