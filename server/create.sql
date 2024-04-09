@@ -1,0 +1,47 @@
+CREATE TABLE Series (
+    series_id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    description VARCHAR(200),
+    start_year VARCHAR(4) NOT NULL,
+    end_year VARCHAR(4)
+);
+
+CREATE TABLE User (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    is_admin TINYINT(1) NOT NULL DEFAULT 0,
+    Fname VARCHAR(20) NOT NULL,
+    Minit VARCHAR(1),
+    Lname VARCHAR(20) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Book (
+    ISBN INT(13) NOT NULL PRIMARY KEY,
+    series_id INT,
+    title VARCHAR(100) NOT NULL,
+    genre VARCHAR(100) NOT NULL,
+    copies INT(3) NOT NULL DEFAULT 1,
+    author VARCHAR(100) NOT NULL,
+    checked_out_by INT,
+    FOREIGN KEY (series_id) REFERENCES Series(series_id) ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY (checked_out_by) REFERENCES User(user_id) ON DELETE SET NULL ON UPDATE CASCADE
+);
+
+CREATE TABLE Review (
+    reviewer_id INT NOT NULL,
+    belongs_to_ISBN INT NOT NULL,
+    date DATE NOT NULL DEFAULT CURRENT_DATE,
+    rating DOUBLE NOT NULL,
+    FOREIGN KEY (reviewer_id) REFERENCES User(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (belongs_to_ISBN) REFERENCES Book(ISBN) ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (reviewer_id, belongs_to_ISBN)
+);
+
+CREATE TABLE Activity (
+    activity_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    activity_type VARCHAR(255),
+    timestamp SMALLDATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE
+);
