@@ -1,83 +1,105 @@
-"ISBN","title","genre","copies","author","checked_out_by","series_name"
-9781408855652,"Harry Potter and the Philosopher's Stone","Fantasy",3,"J.K. Rowling",NULL,"Harry Potter"
-9781338878936,"Harry Potter and the Chamber of Secrets","Fantasy",3,"J.K. Rowling",NULL,"Harry Potter"
-9780439136358,"Harry Potter and the Prisoner of Azkaban","Fantasy",3,"J.K. Rowling",NULL,"Harry Potter"
-9781338878950,"Harry Potter and the Goblet of Fire","Fantasy",3,"J.K. Rowling",NULL,"Harry Potter"
-9781338299182,"Harry Potter and the Order of the Phoenix","Fantasy",3,"J.K. Rowling",NULL,"Harry Potter"
-9780547928210,"The Fellowship of the Ring","Fantasy",2,"J.R.R. Tolkien",NULL,"The Lord of the Rings"
-9780547928203,"The Two Towers","Fantasy",2,"J.R.R. Tolkien",NULL,"The Lord of the Rings"
-9780547928197,"The Return of the King","Fantasy",2,"J.R.R. Tolkien",NULL,"The Lord of the Rings"
-9780786838653,"The Lightning Thief","Fantasy",4,"Rick Riordan",NULL,"Percy Jackson & the Olympians"
-9781423103349,"The Sea of Monsters","Fantasy",4,"Rick Riordan",NULL,"Percy Jackson & the Olympians"
-9781423101482,"The Titan's Curse","Fantasy",4,"Rick Riordan",NULL,"Percy Jackson & the Olympians"
-9781423101499,"The Battle of the Labyrinth","Fantasy",4,"Rick Riordan",NULL,"Percy Jackson & the Olympians"
-9781423101505,"The Last Olympian","Fantasy",4,"Rick Riordan",NULL,"Percy Jackson & the Olympians"
-9780553381689,"A Game of Thrones","Fantasy",5,"George R.R. Martin",NULL,"A Song of Ice and Fire"
-9780007465828,"A Clash of Kings","Fantasy",5,"George R.R. Martin",NULL,"A Song of Ice and Fire"
-9780553381702,"A Storm of Swords","Fantasy",5,"George R.R. Martin",NULL,"A Song of Ice and Fire"
-9780553582024,"A Feast for Crows","Fantasy",5,"George R.R. Martin",NULL,"A Song of Ice and Fire"
-9780553385953,"A Dance with Dragons","Fantasy",5,"George R.R. Martin",NULL,"A Song of Ice and Fire"
-9780316327336,"Twilight","Fantasy",3,"Stephenie Meyer",NULL,"Twilight"
-9780316327787,"New Moon","Fantasy",3,"Stephenie Meyer",NULL,"Twilight"
-9780316328142,"Eclipse","Fantasy",3,"Stephenie Meyer",NULL,"Twilight"
-9780316067935,"Breaking Dawn","Fantasy",3,"Stephenie Meyer",NULL,"Twilight"
-9780439023528,"The Hunger Games","Dystopian",4,"Suzanne Collins",NULL,"The Hunger Games"
-9780545586177,"Catching Fire","Dystopian",4,"Suzanne Collins",NULL,"The Hunger Games"
-9780545663267,"Mockingjay","Dystopian",4,"Suzanne Collins",NULL,"The Hunger Games"
-9780064471046,"The Lion, the Witch and the Wardrobe","Fantasy",5,"C.S. Lewis",NULL,"Chronicles of Narnia"
-9780064471053,"Prince Caspian","Fantasy",5,"C.S. Lewis",NULL,"Chronicles of Narnia"
-9780064405027,"The Voyage of the Dawn Treader","Fantasy",5,"C.S. Lewis",NULL,"Chronicles of Narnia"
-9780064471091,"The Silver Chair","Fantasy",5,"C.S. Lewis",NULL,"Chronicles of Narnia"
-9780064471060,"The Horse and His Boy","Fantasy",5,"C.S. Lewis",NULL,"Chronicles of Narnia"
-9780064471107,"The Magician's Nephew","Fantasy",5,"C.S. Lewis",NULL,"Chronicles of Narnia"
-9780064471084,"The Last Battle","Fantasy",5,"C.S. Lewis",NULL,"Chronicles of Narnia"
-9780385737944,"The Maze Runner","Science Fiction",3,"James Dashner",NULL,"The Maze Runner"
-9780385738750,"The Scorch Trials","Science Fiction",3,"James Dashner",NULL,"The Maze Runner"
-9780385738774,"The Death Cure","Science Fiction",3,"James Dashner",NULL,"The Maze Runner"
-9780385742887,"The Kill Order","Science Fiction",3,"James Dashner",NULL,"The Maze Runner"
-9780553513097,"The Fever Code","Science Fiction",3,"James Dashner",NULL,"The Maze Runner"
-9780062024039,"Divergent","Dystopian",2,"Veronica Roth",NULL,"Divergent"
-9780062024053,"Insurgent","Dystopian",2,"Veronica Roth",NULL,"Divergent"
-9780062024077,"Allegiant","Dystopian",2,"Veronica Roth",NULL,"Divergent"
-9780345539786,"Red Rising","Science Fiction",5,"Pierce Brown",NULL,"Red Rising"
-9780345539816,"Golden Son","Science Fiction",5,"Pierce Brown",NULL,"Red Rising"
-9780345539847,"Morning Star","Science Fiction",5,"Pierce Brown",NULL,"Red Rising"
-9780425285916,"Iron Gold","Science Fiction",2,"Pierce Brown",NULL,"Red Rising"
-9780425285923,"Dark Age","Science Fiction",3,"Pierce Brown",NULL,"Red Rising"
-9781473646803,"Light Bringer","Science Fiction",3,"Pierce Brown",NULL,"Red Rising"
-9780316129084,"Leviathan Wakes","Science Fiction",2,"James S.A. Corey",NULL,"The Expanse"
-9780316129060,"Caliban's War","Science Fiction",4,"James S.A. Corey",NULL,"The Expanse"
-9780316129077,"Abaddon's Gate","Science Fiction",4,"James S.A. Corey",NULL,"The Expanse"
-9780316334686,"Cibola Burn","Science Fiction",2,"James S.A. Corey",NULL,"The Expanse"
-9780316334716,"Nemesis Games","Science Fiction",4,"James S.A. Corey",NULL,"The Expanse"
-9780316332859,"Babylon's Ashes","Science Fiction",4,"James S.A. Corey",NULL,"The Expanse"
-9780316332835,"Persepolis Rising","Science Fiction",3,"James S.A. Corey",NULL,"The Expanse"
-9780316332873,"Tiamat's Wrath","Science Fiction",1,"James S.A. Corey",NULL,"The Expanse"
-9780316332866,"Leviathan Falls","Science Fiction",1,"James S.A. Corey",NULL,"The Expanse"
-9781416914280,"City of Bones","Fantasy",3,"Cassandra Clare",NULL,"The Mortal Instruments"
-9781416972242,"City of Ashes","Fantasy",5,"Cassandra Clare",NULL,"The Mortal Instruments"
-9781416914303,"City of Glass","Fantasy",2,"Cassandra Clare",NULL,"The Mortal Instruments"
-9781442403550,"City of Fallen Angels","Fantasy",1,"Cassandra Clare",NULL,"The Mortal Instruments"
-9781442416864,"City of Lost Souls","Fantasy",5,"Cassandra Clare",NULL,"The Mortal Instruments"
-9781442416895,"City of Heavenly Fire","Fantasy",1,"Cassandra Clare",NULL,"The Mortal Instruments"
-9780451210845,"The Gunslinger","Fantasy",5,"Stephen King",NULL,"The Dark Tower"
-9780451210852,"The Drawing of the Three","Fantasy",4,"Stephen King",NULL,"The Dark Tower"
-9780451210869,"The Waste Lands","Fantasy",2,"Stephen King",NULL,"The Dark Tower"
-9780451210876,"Wizard and Glass","Fantasy",3,"Stephen King",NULL,"The Dark Tower"
-9781880418567,"Wolves of the Calla","Fantasy",3,"Stephen King",NULL,"The Dark Tower"
-9781880418574,"Song of Susannah","Fantasy",5,"Stephen King",NULL,"The Dark Tower"
-9781880418581,"The Dark Tower","Fantasy",4,"Stephen King",NULL,"The Dark Tower"
-9781451658095,"The Wind Through the Keyhole","Fantasy",5,"Stephen King",NULL,"The Dark Tower"
-9780142406113,"Stormbreaker","Mystery",2,"Anthony Horowitz",NULL,"Alex Rider"
-9780142406120,"Point Blanc","Mystery",2,"Anthony Horowitz",NULL,"Alex Rider"
-9780142406144,"Skeleton Key","Mystery",3,"Anthony Horowitz",NULL,"Alex Rider"
-9780142406137,"Eagle Strike","Mystery",4,"Anthony Horowitz",NULL,"Alex Rider"
-9780439680097,"Scorpia","Mystery",3,"Anthony Horowitz",NULL,"Alex Rider"
-9780439680066,"Ark Angel","Mystery",5,"Anthony Horowitz",NULL,"Alex Rider"
-9780439680080,"Snakehead","Mystery",1,"Anthony Horowitz",NULL,"Alex Rider"
-9780399250569,"Crocodile Tears","Mystery",4,"Anthony Horowitz",NULL,"Alex Rider"
-9780399250576,"Scorpia Rising","Mystery",4,"Anthony Horowitz",NULL,"Alex Rider"
-9780399254413,"Russian Roulette","Mystery",3,"Anthony Horowitz",NULL,"Alex Rider"
-9781524739300,"Never Say Die","Mystery",2,"Anthony Horowitz",NULL,"Alex Rider"
-9781406395877,"Nightshade","Mystery",4,"Anthony Horowitz",NULL,"Alex Rider"
-9780593691397,"Nightshade Revenge","Mystery",3,"Anthony Horowitz",NULL,"Alex Rider"
+"ISBN","title","genre","copies","author","checked_out_by","Series_ID"
+9781408855652,"Harry Potter and the Philosopher's Stone","Fantasy",3,"J.K. Rowling",NULL,1
+9781338878936,"Harry Potter and the Chamber of Secrets","Fantasy",3,"J.K. Rowling",NULL,1
+9780439136358,"Harry Potter and the Prisoner of Azkaban","Fantasy",3,"J.K. Rowling",NULL,1
+9781338878950,"Harry Potter and the Goblet of Fire","Fantasy",3,"J.K. Rowling",NULL,1
+9781338299182,"Harry Potter and the Order of the Phoenix","Fantasy",3,"J.K. Rowling",NULL,1
+9780547928210,"The Fellowship of the Ring","Fantasy",2,"J.R.R. Tolkien",NULL,2
+9780547928203,"The Two Towers","Fantasy",2,"J.R.R. Tolkien",NULL,2
+9780547928197,"The Return of the King","Fantasy",2,"J.R.R. Tolkien",NULL,2
+9780786838653,"The Lightning Thief","Fantasy",4,"Rick Riordan",NULL,3
+9781423103349,"The Sea of Monsters","Fantasy",4,"Rick Riordan",NULL,3
+9781423101482,"The Titan's Curse","Fantasy",4,"Rick Riordan",NULL,3
+9781423101499,"The Battle of the Labyrinth","Fantasy",4,"Rick Riordan",NULL,3
+9781423101505,"The Last Olympian","Fantasy",4,"Rick Riordan",NULL,3
+9780553381689,"A Game of Thrones","Fantasy",5,"George R.R. Martin",NULL,4
+9780007465828,"A Clash of Kings","Fantasy",5,"George R.R. Martin",NULL,4
+9780553381702,"A Storm of Swords","Fantasy",5,"George R.R. Martin",NULL,4
+9780553582024,"A Feast for Crows","Fantasy",5,"George R.R. Martin",NULL,4
+9780553385953,"A Dance with Dragons","Fantasy",5,"George R.R. Martin",NULL,4
+9780316327336,"Twilight","Fantasy",3,"Stephenie Meyer",NULL,5
+9780316327787,"New Moon","Fantasy",3,"Stephenie Meyer",NULL,5
+9780316328142,"Eclipse","Fantasy",3,"Stephenie Meyer",NULL,5
+9780316067935,"Breaking Dawn","Fantasy",3,"Stephenie Meyer",NULL,5
+9780439023528,"The Hunger Games","Dystopian",4,"Suzanne Collins",NULL,6
+9780545586177,"Catching Fire","Dystopian",4,"Suzanne Collins",NULL,6
+9780545663267,"Mockingjay","Dystopian",4,"Suzanne Collins",NULL,6
+9780064471046,"The Lion, the Witch and the Wardrobe","Fantasy",5,"C.S. Lewis",NULL,7
+9780064471053,"Prince Caspian","Fantasy",5,"C.S. Lewis",NULL,7
+9780064405027,"The Voyage of the Dawn Treader","Fantasy",5,"C.S. Lewis",NULL,7
+9780064471091,"The Silver Chair","Fantasy",5,"C.S. Lewis",NULL,7
+9780064471060,"The Horse and His Boy","Fantasy",5,"C.S. Lewis",NULL,7
+9780064471107,"The Magician's Nephew","Fantasy",5,"C.S. Lewis",NULL,7
+9780064471084,"The Last Battle","Fantasy",5,"C.S. Lewis",NULL,7
+9780385737944,"The Maze Runner","Science Fiction",3,"James Dashner",NULL,8
+9780385738750,"The Scorch Trials","Science Fiction",3,"James Dashner",NULL,8
+9780385738774,"The Death Cure","Science Fiction",3,"James Dashner",NULL,8
+9780385742887,"The Kill Order","Science Fiction",3,"James Dashner",NULL,8
+9780553513097,"The Fever Code","Science Fiction",3,"James Dashner",NULL,8
+9780062024039,"Divergent","Dystopian",2,"Veronica Roth",NULL,9
+9780062024053,"Insurgent","Dystopian",2,"Veronica Roth",NULL,9
+9780062024077,"Allegiant","Dystopian",2,"Veronica Roth",NULL,9
+9780345539786,"Red Rising","Science Fiction",5,"Pierce Brown",NULL,10
+9780345539816,"Golden Son","Science Fiction",5,"Pierce Brown",NULL,10
+9780345539847,"Morning Star","Science Fiction",5,"Pierce Brown",NULL,10
+9780425285916,"Iron Gold","Science Fiction",2,"Pierce Brown",NULL,10
+9780425285923,"Dark Age","Science Fiction",3,"Pierce Brown",NULL,10
+9781473646803,"Light Bringer","Science Fiction",3,"Pierce Brown",NULL,10
+9780316129084,"Leviathan Wakes","Science Fiction",2,"James S.A. Corey",NULL,11
+9780316129060,"Caliban's War","Science Fiction",4,"James S.A. Corey",NULL,11
+9780316129077,"Abaddon's Gate","Science Fiction",4,"James S.A. Corey",NULL,11
+9780316334686,"Cibola Burn","Science Fiction",2,"James S.A. Corey",NULL,11
+9780316334716,"Nemesis Games","Science Fiction",4,"James S.A. Corey",NULL,11
+9780316332859,"Babylon's Ashes","Science Fiction",4,"James S.A. Corey",NULL,11
+9780316332835,"Persepolis Rising","Science Fiction",3,"James S.A. Corey",NULL,11
+9780316332873,"Tiamat's Wrath","Science Fiction",1,"James S.A. Corey",NULL,11
+9780316332866,"Leviathan Falls","Science Fiction",1,"James S.A. Corey",NULL,11
+9781416914280,"City of Bones","Fantasy",3,"Cassandra Clare",NULL,12
+9781416972242,"City of Ashes","Fantasy",5,"Cassandra Clare",NULL,12
+9781416914303,"City of Glass","Fantasy",2,"Cassandra Clare",NULL,12
+9781442403550,"City of Fallen Angels","Fantasy",1,"Cassandra Clare",NULL,12
+9781442416864,"City of Lost Souls","Fantasy",5,"Cassandra Clare",NULL,12
+9781442416895,"City of Heavenly Fire","Fantasy",1,"Cassandra Clare",NULL,12
+9780451210845,"The Gunslinger","Horror",5,"Stephen King",NULL,13
+9780451210852,"The Drawing of the Three","Horror",4,"Stephen King",NULL,13
+9780451210869,"The Waste Lands","Horror",2,"Stephen King",NULL,13
+9780451210876,"Wizard and Glass","Horror",3,"Stephen King",NULL,13
+9781880418567,"Wolves of the Calla","Horror",3,"Stephen King",NULL,13
+9781880418574,"Song of Susannah","Horror",5,"Stephen King",NULL,13
+9781880418581,"The Dark Tower","Horror",4,"Stephen King",NULL,13
+9781451658095,"The Wind Through the Keyhole","Horror",5,"Stephen King",NULL,13
+9780142406113,"Stormbreaker","Mystery",2,"Anthony Horowitz",NULL,14
+9780142406120,"Point Blanc","Mystery",2,"Anthony Horowitz",NULL,14
+9780142406144,"Skeleton Key","Mystery",3,"Anthony Horowitz",NULL,14
+9780142406137,"Eagle Strike","Mystery",4,"Anthony Horowitz",NULL,14
+9780439680097,"Scorpia","Mystery",3,"Anthony Horowitz",NULL,14
+9780439680066,"Ark Angel","Mystery",5,"Anthony Horowitz",NULL,14
+9780439680080,"Snakehead","Mystery",1,"Anthony Horowitz",NULL,14
+9780399250569,"Crocodile Tears","Mystery",4,"Anthony Horowitz",NULL,14
+9780399250576,"Scorpia Rising","Mystery",4,"Anthony Horowitz",NULL,14
+9780399254413,"Russian Roulette","Mystery",3,"Anthony Horowitz",NULL,14
+9781524739300,"Never Say Die","Mystery",2,"Anthony Horowitz",NULL,14
+9781406395877,"Nightshade","Mystery",4,"Anthony Horowitz",NULL,14
+9780593691397,"Nightshade Revenge","Mystery",3,"Anthony Horowitz",NULL,14
+9780810993136,"Diary of a Wimpy Kid","Comedy",4,"Jeff Kinney",NULL,15
+9780810994737,"Rodrick Rules","Comedy",5,"Jeff Kinney",NULL,15
+9780810988927,"The Last Straw","Comedy",2,"Jeff Kinney",NULL,15
+9780810989931,"Dog Days","Comedy",1,"Jeff Kinney",NULL,15
+9780810989955,"The Ugly Truth","Comedy",2,"Jeff Kinney",NULL,15
+9781419702235,"Cabin Fever","Comedy",5,"Jeff Kinney",NULL,15
+9781419705847,"The Third Wheel","Comedy",3,"Jeff Kinney",NULL,15
+9781419711329,"Hard Luck","Comedy",3,"Jeff Kinney",NULL,15
+9781419714887,"The Long Haul","Comedy",3,"Jeff Kinney",NULL,15
+9781419723452,"Old School","Comedy",3,"Jeff Kinney",NULL,15
+9781419745751,"Double Down","Comedy",3,"Jeff Kinney",NULL,15
+9781419741999,"The Getaway","Comedy",4,"Jeff Kinney",NULL,15
+9781419741869,"The Meltdown","Comedy",2,"Jeff Kinney",NULL,15
+9781595141743,"Vampire Academy","Romance",3,"Richelle Mead",NULL,16
+9781595141750,"Frostbite","Romance",1,"Richelle Mead",NULL,16
+9781595141972,"Shadow Kiss","Romance",1,"Richelle Mead",NULL,16
+9781595141989,"Blood Promise","Romance",1,"Richelle Mead",NULL,16
+9781595142504,"Spirit Bound","Romance",3,"Richelle Mead",NULL,16
+9781595143068,"Last Sacrifice","Romance",3,"Richelle Mead",NULL,16
+9780307269751,"The Girl with the Dragon Tattoo","Crime, Mystery",2,"Stieg Larsson",NULL,17
+9780307269980,"The Girl Who Played with Fire","Crime, Mystery",4,"Stieg Larsson",NULL,17
+9780307269997,"The Girl Who Kicked the Hornets' Nest","Crime, Mystery",4,"Stieg Larsson",NULL,17
