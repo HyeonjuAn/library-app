@@ -1,51 +1,51 @@
-user_id, email, is_admin, Fname, Minit, Lname, password
-1, james.smith@gmail.com, 0, James, A, Smith, EZS;=6YZuT6Q
-2, mary.johnson@gmail.com, 0, Mary, B, Johnson, "`2""b*.]/Wok2"
-3, john.williams@gmail.com, 0, John, C, Williams, "qD-s/x""=Q/**"
-4, patricia.jones@gmail.com, 1, Patricia, D, Jones, e@0_tEz.P5q)
-5, robert.brown@gmail.com, 1, Robert, E, Brown, 6Vw{vNO#j)bx
-6, jennifer.davis@gmail.com, 1, Jennifer, F, Davis, Eoe@Gy/sBy'9
-7, michael.miller@gmail.com, 0, Michael, G, Miller, qv]k.C1d'^RN
-8, linda.wilson@gmail.com, 0, Linda, H, Wilson, "8u^VQ""}%M{bv"
-9, william.moore@gmail.com, 0, William, I, Moore, a?Lya98{'6Nt
-10, elizabeth.taylor@gmail.com, 0, Elizabeth, J, Taylor, ",w:B$X,]#c}="
-11, david.anderson@gmail.com, 1, David, K, Anderson, "NYemC%._w""wv"
-12, barbara.thomas@gmail.com, 1, Barbara, L, Thomas, !S3b<__ly2x\
-13, richard.jackson@gmail.com, 1, Richard, M, Jackson, "1:""[4""}Q]L/"""
-14, susan.white@gmail.com, 0, Susan, N, White, KVy|6LX|.[Y^
-15, joseph.harris@gmail.com, 1, Joseph, O, Harris, "Gj,(;[,p-,1M"
-16, jessica.martin@gmail.com, 1, Jessica, P, Martin, 3eaLC_wuTaJZ
-17, thomas.thompson@gmail.com, 1, Thomas, Q, Thompson, vlq4csF$IFc(
-18, sarah.garcia@gmail.com, 1, Sarah, R, Garcia, Bou(YKAT2jy2
-19, charles.martinez@yahoo.com, 0, Charles, S, Martinez, )!*P!`5J~<fI
-20, karen.robinson@yahoo.com, 1, Karen, T, Robinson, "V7*\oqDI=2,p"
-21, christopher.clark@yahoo.com, 0, Christopher, U, Clark, J6xOK\[hR~G<
-22, nancy.rodriguez@yahoo.com, 1, Nancy, V, Rodriguez, McDoNaLdS1
-23, daniel.lewis@yahoo.com, 1, Daniel, W, Lewis, $.IB*PU.;1jY
-24, lisa.lee@yahoo.com, 1, Lisa, X, Lee, 3M(mvNhDk95y
-25, matthew.walker@yahoo.com, 0, Matthew, Y, Walker, L^E4%+'t3@\j
-26, margaret.hall@yahoo.com, 0, Margaret, Z, Hall, ~+Int]hkC/p4
-27, anthony.allen@yahoo.com, 0, Anthony, A, Allen, "(Gf6@8;(,Ju_"
-28, betty.young@yahoo.com, 0, Betty, A, Young, "sG^zJ><,ndUn"
-29, mark.hernandez@yahoo.com, 0, Mark, A, Hernandez, "Ak""CW~JH-m`"""
-30, sandra.king@yahoo.com, 1, Sandra, A, King, sRTonZ)s6cU]
-31, donald.wright@yahoo.com, 0, Donald, A, Wright, mMK{=qiHgZ=t
-32, ashley.lopez@yahoo.com, 0, Ashley, F, Lopez, P\Ve';l[_]|H
-33, steven.hill@yahoo.com, 1, Steven, G, Hill,  Amw_r6%s@?^L
-34, kimberly.scott@yahoo.com, 1, Kimberly, H, Scott, }XY/E$19z(cF
-35, paul.green@yahoo.com, 1, Paul, A, Green, }z\EkS1yEgml
-36, emily.adams@yahoo.com, 1, Emily, J, Adams, ]4o2q)ZsWMx;
-37, andrew.baker@yahoo.com, 0, Andrew, K, Baker, y@F>jCjJ%1DF
-38, donna.gonzalez@yahoo.com, 0, Donna, L, Gonzalez, 6N@RuaAd}UQj
-39, joshua.nelson@yahoo.com, 1, Joshua, M, Nelson, ?*dMh2hJq?aS
-40, michelle.carter@hotmail.com, 0, Michelle, N, Carter, "^3~$Wk4[46e,"
-41, kenneth.mitchell@hotmail.com, 1, Kenneth, O, Mitchell, dx:SL4>FLjxl
-42, dorothy.perez@hotmail.com, 1, Dorothy, P, Perez, )aAFC\]N#G]O
-43, kevin.roberts@hotmail.com, 0, Kevin, A, Roberts, "CNL4_a[O,W+r"
-44, carol.turner@hotmail.com, 0, Carol, R, Turner, """kdouc|e=^H&"
-45, brian.phillips@hotmail.com, 0, Brian, S, Phillips, 0d_44Dzo5gF9
-46, amanda.smith@hotmail.com, 0, Amanda, T, Smith, "y,nEs[TUYU}v"
-47, george.johnson@hotmail.com, 1, George, U, Johnson, -fPCnZ&=.SN>
-48, melissa.williams@hotmail.com, 0, Melissa, V, Williams, "XZNu""G}+$RF-"
-49, edward.jones@hotmail.com, 1, Edward, W, Jones, AJnh{/T#UDPX
-50, deborah.brown@hotmail.com, 0, Deborah, W, Brown, M7m8.SqMmlRY
+email, is_admin, Fname, Minit, Lname, password
+james.smith@gmail.com, 0, James,A, Smith, EZS6YZuT6Q
+mary.johnson@gmail.com, 0, Mary,B, Johnson, 2bWok2
+john.williams@gmail.com, 0, John,C, Williams, qDsxAQ
+patricia.jones@gmail.com, 1, Patricia,D, Jones, e0tEzP5q
+robert.brown@gmail.com, 1, Robert,E, Brown, 6VwvNOjbx
+jennifer.davis@gmail.com, 1, Jennifer,F, Davis, EoesBy9
+michael.miller@gmail.com, 0, Michael,G, Miller, qvC1dRN
+linda.wilson@gmail.com, 0, Linda,H, Wilson, 8uVQMbv
+william.moore@gmail.com, 0, William,I, Moore, aLya98s6Nt
+elizabeth.taylor@gmail.com, 0, Elizabeth,J, Taylor, wBXc
+david.anderson@gmail.com, 1, David,K, Anderson, NYemCwwv
+barbara.thomas@gmail.com, 1, Barbara,L, Thomas, Sbly2x
+richard.jackson@gmail.com, 1, Richard,M, Jackson, 14QQL
+susan.white@gmail.com, 0, Susan,N, White, KVy6LXY
+joseph.harris@gmail.com, 1, Joseph,O, Harris, Gjp1M
+jessica.martin@gmail.com, 1, Jessica,P, Martin, 3eaLCwuTaJZ
+thomas.thompson@gmail.com, 1, Thomas,Q, Thompson, vlq4csFIFc
+sarah.garcia@gmail.com, 1, Sarah,R, Garcia, BouYKAT2jy2
+charles.martinez@yahoo.com, 0, Charles,S, Martinez, PJfI
+karen.robinson@yahoo.com, 1, Karen,T, Robinson, VooqDI2p
+christopher.clark@yahoo.com, 0, Christopher,U, Clark, J6xOKhRG
+nancy.rodriguez@yahoo.com, 1, Nancy,V, Rodriguez, McDoNaLdS1
+daniel.lewis@yahoo.com, 1, Daniel,W, Lewis, IBPUIjY
+lisa.lee@yahoo.com, 1, Lisa,X, Lee, 3MmvNhDk95y
+matthew.walker@yahoo.com, 0, Matthew,Y, Walker, LE4tj
+margaret.hall@yahoo.com, 0, Margaret,Z, Hall, Int hkCp4
+anthony.allen@yahoo.com, 0, Anthony,A, Allen, GfJup
+betty.young@yahoo.com, 0, Betty,A, Young, sGzJndUn
+mark.hernandez@yahoo.com, 0, Mark,A, Hernandez, AkCWJHm
+sandra.king@yahoo.com, 1, Sandra,A, King, sRTonZs6cU
+donald.wright@yahoo.com, 0, Donald,A, Wright, mMKqHgZt
+ashley.lopez@yahoo.com, 0, Ashley,F, Lopez, PVe
+steven.hill@yahoo.com, 1, Steven,G, Hill, AmwrL
+kimberly.scott@yahoo.com, 1, Kimberly,H, Scott, XYEZcF
+paul.green@yahoo.com, 1, Paul,A, Green, zEkSyEgml
+emily.adams@yahoo.com, 1, Emily,J, Adams, oqZsWMx
+andrew.baker@yahoo.com, 0, Andrew,K, Baker, yFjCjJDF
+donna.gonzalez@yahoo.com, 0, Donna,L, Gonzalez, NRuaAdUQj
+joshua.nelson@yahoo.com, 1, Joshua,M, Nelson, dhJqaS
+michelle.carter@hotmail.com, 0, Michelle,N, Carter, Wk46e
+kenneth.mitchell@hotmail.com, 1, Kenneth,O, Mitchell, dxSLFLjxl
+dorothy.perez@hotmail.com, 1, Dorothy,P, Perez, aAFCNGO
+kevin.roberts@hotmail.com, 0, Kevin,A, Roberts, CNLaOWr
+carol.turner@hotmail.com, 0, Carol,R, Turner, kdouceH
+brian.phillips@hotmail.com, 0, Brian,S, Phillips, dDzgF9
+amanda.smith@hotmail.com, 0, Amanda,T, Smith, ynEsTUYUv
+george.johnson@hotmail.com, 1, George,U, Johnson, fPCnZSN
+melissa.williams@hotmail.com, 0, Melissa,V, Williams, XZNuGRF
+edward.jones@hotmail.com, 1, Edward,W, Jones, AJnhTUDPX
+deborah.brown@hotmail.com, 0, Deborah,W, Brown, M7m8SqMmlRY

@@ -5,7 +5,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(series_id, Name, description, start_year, end_year);
+(Name, description, start_year, end_year);
 
 -- Load data for Users
 LOAD DATA INFILE './users.csv'
@@ -14,7 +14,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(user_id, email, is_admin, Fname, Minit, Lname, password);
+(email, is_admin, Fname, Minit, Lname, password);
 
 -- Load data for Books
 LOAD DATA INFILE './books.csv'
@@ -23,8 +23,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(ISBN, series_id, title, genre, copies, author, checked_out_by);
-
+(ISBN, title, genre, copies, author, checked_out_by, series_id);
 
 -- User generated data, no need for dummy data
 -- Load data for Reviews
