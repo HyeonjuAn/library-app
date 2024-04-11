@@ -1,4 +1,4 @@
-"ISBN","title","genre","copies","author","checked_out_by","Series_ID"
+"ISBN","title","genre","copies","author","checked_out_by","series_id"
 9781408855652,"Harry Potter and the Philosopher's Stone","Fantasy",3,"J.K. Rowling",NULL,1
 9781338878936,"Harry Potter and the Chamber of Secrets","Fantasy",3,"J.K. Rowling",NULL,1
 9780439136358,"Harry Potter and the Prisoner of Azkaban","Fantasy",3,"J.K. Rowling",NULL,1
