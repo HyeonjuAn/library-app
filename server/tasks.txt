@@ -1,0 +1,46 @@
+Client-side:
+    - Create Dashboard page with all of the books
+        - Store book info in w/ Array State
+            - If user searches for book, update state with search results
+    - Create book card component
+    - Create book page with all of the book details and reviews
+
+Server-side:
+    - Dashboard page should fetch all books from the server
+
+    - Create routes to:
+        - User:
+            - Login
+            - Register
+            - Logout
+            - Delete user
+
+            Not Required
+            - Update user info
+            - Get user info
+
+        - Books:
+            - Get books sorted by title
+            - Get books sorted by author
+            - Get books sorted by ISBN
+            - Get book info
+            - Add book
+            - Update book
+            - Delete book
+
+        - Reviews:
+            - Get reviews for a book
+            - Add review for a book
+            - Update review for a book
+            - Delete review for a book
+
+        - Activities:
+            - Get activities for a user
+            - Add activity for a user
+
+        - Series:
+            - Get series
+            - Get series info
+            - Get series books
+            - Add series
+            - Delete series
