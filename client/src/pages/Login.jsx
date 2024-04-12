@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../helpers/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -11,6 +12,7 @@ const Login = () => {
     const [checkAdmin, setCheckAdmin] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const [signUp, setSignUp] = useState(false);
+    const { setUser } = useContext(UserContext);
     const navigate = useNavigate();
 
     const handleCheckboxChange = (event) => {
@@ -39,7 +41,7 @@ const Login = () => {
                         withCredentials: true,
                     },
                 );
-                console.log(data)
+                console.log(data);
                 if (data.status) {
                     navigate(0);
                     console.log(data);
@@ -57,7 +59,7 @@ const Login = () => {
                 );
                 if (data.status === "success") {
                     navigate("/dashboard");
-                    console.log(data);
+                    setUser(data.user);
                 }
             } catch (error) {
                 console.log(error);
