@@ -6,9 +6,12 @@ export default function Home() {
         <main className="dark:bg-gray-800 bg-white relative overflow-hidden min-h-screen w-full">
             <header className="h-24 sm:h-32 flex items-center z-30 w-full">
                 <div className="container mx-auto px-6 flex items-center justify-between w-full">
-                    <div className="text-gray-800 dark:text-white font-black text-3xl">
+                    <Link
+                        to="/"
+                        className="text-gray-800 dark:text-white font-black text-3xl"
+                    >
                         LibrarySpace.
-                    </div>
+                    </Link>
                 </div>
             </header>
             <div className="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden w-full">

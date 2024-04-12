@@ -1,17 +1,18 @@
-import { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import ImagePreview from "../components/ImagePreview";
+import { useState, useContext } from "react";
+import { UserContext } from "../helpers/UserContext";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
     const [email, setEmail] = useState("");
-    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [file, setFile] = useState(null);
-    const [image, setImage] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [mInit, setMInit] = useState("");
+    const [checkAdmin, setCheckAdmin] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const [signUp, setSignUp] = useState(false);
-    const fileInputRef = useRef(null);
+    const { setUser } = useContext(UserContext);
     const navigate = useNavigate();
 
     const handleCheckboxChange = (event) => {
@@ -20,26 +21,28 @@ const Login = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        console.log(signUp);
 
         if (signUp) {
-            const formData = new FormData();
-            formData.append("email", email);
-            formData.append("username", username);
-            formData.append("password", password);
-            if (file) {
-                formData.append("file", file);
-            }
-
             try {
+                const is_admin = checkAdmin ? 1 : 0;
+                console.log(is_admin);
                 const { data } = await axios.post(
-                    "http://localhost:8000/api/register",
-                    formData,
+                    "/api/register.php",
                     {
-                        headers: { "Content-Type": "multipart/form-data" },
+                        email,
+                        password,
+                        firstName,
+                        lastName,
+                        mInit,
+                        is_admin,
+                    },
+                    {
                         withCredentials: true,
                     },
                 );
-                if (data.success) {
+                console.log(data);
+                if (data.status) {
                     navigate(0);
                     console.log(data);
                 }
@@ -47,20 +50,20 @@ const Login = () => {
                 console.log(error);
             }
             return;
-        }
-
-        try {
-            const { data } = await axios.post(
-                "http://localhost:8000/api/login",
-                { email, password },
-                { withCredentials: true },
-            );
-            if (data.success) {
-                navigate("/dashboard");
-                console.log(data);
+        } else {
+            try {
+                const { data } = await axios.post(
+                    "/api/login.php",
+                    { email, password },
+                    { withCredentials: true },
+                );
+                if (data.status === "success") {
+                    navigate("/dashboard");
+                    setUser(data.user);
+                }
+            } catch (error) {
+                console.log(error);
             }
-        } catch (error) {
-            console.log(error);
         }
     };
 
@@ -68,9 +71,12 @@ const Login = () => {
         <div className="dark:bg-gray-800 bg-white relative overflow-y-auto h-screen">
             <div className="max-w-md w-full mx-auto px-4 py-4">
                 <header className="mb-12 text-center">
-                    <div className="text-gray-800 dark:text-white font-black text-3xl">
+                    <Link
+                        to="/"
+                        className="text-gray-800 dark:text-white font-black text-3xl"
+                    >
                         LibrarySpace.
-                    </div>
+                    </Link>
                 </header>
 
                 {/* Form */}
@@ -79,28 +85,18 @@ const Login = () => {
                         type="radio"
                         name="options"
                         aria-label="Login"
+                        value="login"
                         className="join-item btn rounded-none grow"
-                        onClick={() => {
-                            setEmail("");
-                            setUsername("");
-                            setPassword("");
-                            setFile(null);
-                            setSignUp(false);
-                        }}
+                        onChange={() => setSignUp(false)}
                         checked={signUp === false}
                     />
                     <input
                         type="radio"
                         name="options"
                         aria-label="Sign Up"
+                        value="signup"
                         className="join-item btn rounded-none grow"
-                        onClick={() => {
-                            setEmail("");
-                            setUsername("");
-                            setPassword("");
-                            setFile(null);
-                            setSignUp(true);
-                        }}
+                        onChange={() => setSignUp(true)}
                         checked={signUp === true}
                     />
                 </div>
@@ -111,10 +107,75 @@ const Login = () => {
                     >
                         <div className="mb-4">
                             <label
-                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
+                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2 flex justify-between"
+                                htmlFor="First Name"
+                            >
+                                <span>First Name</span>
+                                <span className="badge badge-error">Required</span>
+                            </label>
+                            <input
+                                className="shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+                                id="First Name"
+                                type="text"
+                                placeholder="First Name"
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2 flex justify-between"
+                                htmlFor="Middle Initial"
+                            >
+                                <span>Middle Initial</span>
+                                <span className="badge badge-info">Optional</span>
+                            </label>
+                            <input
+                                className="shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+                                id="Middle Initial"
+                                type="text"
+                                placeholder="Middle Initial"
+                                value={mInit}
+                                onChange={(e) => setMInit(e.target.value)}
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2 flex justify-between"
+                                htmlFor="Last Name"
+                            >
+                                <span>Last Name</span>
+                                <span className="badge badge-error">Required</span>
+                            </label>
+                            <input
+                                className="shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+                                id="Last Name"
+                                type="text"
+                                placeholder="Last Name"
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="label cursor-pointer btn btn-ghost">
+                                <span className="label-text text-lg">Admin?</span>
+                                <input
+                                    type="checkbox"
+                                    className="checkbox"
+                                    onChange={() => setCheckAdmin(!checkAdmin)}
+                                    checked={checkAdmin}
+                                />
+                            </label>
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2 flex justify-between"
                                 htmlFor="email"
                             >
-                                Email
+                                <span>Email</span>
+                                <span className="badge badge-error">Required</span>
                             </label>
                             <input
                                 className="shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
@@ -125,29 +186,13 @@ const Login = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
-                        <div className="mb-4">
-                            <label
-                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
-                                htmlFor="username"
-                            >
-                                Username
-                            </label>
-                            <input
-                                className="shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
-                                id="username"
-                                type="text"
-                                placeholder="Username"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                required
-                            />
-                        </div>
                         <div className="mb-2">
                             <label
-                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
+                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2 flex justify-between"
                                 htmlFor="password"
                             >
-                                Password
+                                <span>Password</span>
+                                <span className="badge badge-error">Required</span>
                             </label>
                             <input
                                 className="shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -170,49 +215,17 @@ const Login = () => {
                                 />
                             </label>
                         </div>
-                        <div className="mb-8">
-                            <label
-                                className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
-                                htmlFor="file"
-                            >
-                                Profile Picture
-                            </label>
-                            <input
-                                type="file"
-                                id="file"
-                                ref={fileInputRef}
-                                className="file-input file-input-bordered file-input-md w-full max-w-xs"
-                                onChange={(e) => {
-                                    if (e.target.files && e.target.files.length > 0) {
-                                        const selectedFile = e.target.files[0];
-                                        setFile(selectedFile);
-                                        setImage(URL.createObjectURL(selectedFile));
-                                    }
-                                }}
-                            />
-                            {image && (
-                                <ImagePreview
-                                    image={image}
-                                    clearImage={() => {
-                                        setFile(null);
-                                        setImage(null);
-                                        if (fileInputRef.current) {
-                                            fileInputRef.current.value = "";
-                                        }
-                                    }}
-                                />
-                            )}
-                        </div>
+
                         <div className="flex items-center justify-between">
                             <button className="btn btn-primary" type="submit">
                                 Sign Up
                             </button>
-                            <a
+                            <Link
                                 href="#!"
                                 className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
                             >
                                 Forgot Password?
-                            </a>
+                            </Link>
                         </div>
                     </form>
                 ) : (
@@ -228,7 +241,7 @@ const Login = () => {
                                 Email
                             </label>
                             <input
-                                className="shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+                                className={`shadow appearance-none input-bordered rounded w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline `}
                                 id="email"
                                 type="email"
                                 placeholder="Email"
