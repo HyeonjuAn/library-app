@@ -10,7 +10,7 @@ const SearchBar = ({ onSearch }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="form-control flex flex-row gap-2">
+        <form onSubmit={handleSubmit} className="form-control flex flex-row gap-2 justify-center py-10">
             <select
                 className="select select-bordered"
                 value={searchType}
