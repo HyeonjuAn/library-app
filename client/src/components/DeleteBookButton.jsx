@@ -1,17 +1,36 @@
 import axios from "axios";
+import { useContext } from "react";
+import { UserContext } from "../helpers/UserContext";
 
-const DeleteBookButton = ({ ISBN }) => {
-    const deleteBook = async () => {
+const DeleteBookButton = ({ ISBN, setBooks, books, book }) => {
+    const { user } = useContext(UserContext);
+
+    const handleDelete = async () => {
+        if (!user || !user.is_admin) {
+            return;
+        }
+        const config = {
+            data: {
+                user_id: user.user_id,
+                isbn: ISBN,
+            },
+            headers: {
+                "Content-Type": "application/json",
+            },
+            withCredentials: true,
+        };
+
         try {
-            const response = await axios.delete(`/api/book.php?isbn=${ISBN}`);
+            const response = await axios.delete(`/api/book.php`, config);
             console.log(response);
+            setBooks(books.filter((book) => book.ISBN !== ISBN));
         } catch (error) {
             console.error(error);
         }
     };
 
     return (
-        <button className="btn btn-square btn-outline" onClick={deleteBook}>
+        <button className="btn btn-square btn-outline" onClick={handleDelete}>
             <svg
                 width="50px"
                 height="50px"

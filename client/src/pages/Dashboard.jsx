@@ -5,7 +5,8 @@ import SeriesCard from "../components/SeriesCard";
 import axios from "axios";
 
 const Dashboard = () => {
-    const [items, setItems] = useState([]);
+    const [books, setBooks] = useState([]);
+    const [series, setSeries] = useState([]);
     const [displayType, setDisplayType] = useState("books");
     const itemsPerPage = 10;
 
@@ -14,21 +15,12 @@ const Dashboard = () => {
             try {
                 const { data } = await axios.get("/api/book.php?isbn=all");
                 console.log(data);
-                setItems(data.books);
+                setBooks(data.books);
             } catch (error) {
                 console.error("Dashboard Error: ", error);
             }
         })();
     }, []);
-
-    const handleSearch = (e) => {
-        setSearchQuery(e.target.value);
-        setCurrentPage(0);
-    };
-
-    const handlePageChange = ({ selected }) => {
-        setCurrentPage(selected);
-    };
 
     const handleDisplayTypeChange = (e) => {
         setDisplayType(e.target.value);
@@ -37,8 +29,15 @@ const Dashboard = () => {
 
     const renderContent = () => {
         return displayType === "books"
-            ? items.map((book) => <BookCard key={book.ISBN} book={book} />)
-            : items.map((serie) => (
+            ? books.map((book) => (
+                <BookCard
+                    key={book.ISBN}
+                    book={book}
+                    setBooks={setBooks}
+                    books={books}
+                />
+            ))
+            : series.map((serie) => (
                 <SeriesCard key={serie.series_id} series={serie} />
             ));
     };

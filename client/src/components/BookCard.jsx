@@ -5,7 +5,7 @@ import DeleteBookButton from "./DeleteBookButton";
 import { useContext } from "react";
 import { UserContext } from "../helpers/UserContext";
 
-const BookCard = ({ book }) => {
+const BookCard = ({ book, setBooks, books }) => {
     const { user } = useContext(UserContext);
     return (
         <div className="card w-96 text-neutral-content bg-neutral">
@@ -15,7 +15,11 @@ const BookCard = ({ book }) => {
                 <p>{`Genre: ${book.genre}`}</p>
                 {user && user.is_admin == 1 ? (
                     <div className="card-actions justify-between">
-                        <DeleteBookButton ISBN={book.ISBN} />
+                        <DeleteBookButton
+                            ISBN={book.ISBN}
+                            setBooks={setBooks}
+                            books={books}
+                        />
                         <Link
                             to={`/books/${book.ISBN}`}
                             className="btn btn-primary btn-outline"

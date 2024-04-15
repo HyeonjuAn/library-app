@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Dashboard from "./pages/Dashboard";
 import BookDetails from "./pages/BookDetails";
+import AddBook from "./pages/AddBook";
 import Login from "./pages/Login";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/add-book" element={<AddBook />} />
                 <Route path="/books/:isbn" element={<BookDetails />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/*" element={<Error />} />
