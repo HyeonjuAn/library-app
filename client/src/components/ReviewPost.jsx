@@ -9,11 +9,15 @@ const ReviewPost = ({ bookISBN }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("/api/review", {
-                isbn: bookISBN,
-                rating: review,
-                reviewer_id: user.id,
-            });
+            const { data } = await axios.post(
+                "/api/review.php",
+                {
+                    isbn: bookISBN,
+                    rating: review,
+                    reviewer_id: user.user_id,
+                },
+                { withCredentials: true },
+            );
             console.log(data);
         } catch (error) {
             console.error(error);

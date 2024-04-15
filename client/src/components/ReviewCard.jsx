@@ -1,8 +1,6 @@
 import React from "react";
 
 const ReviewCard = ({ rating }) => {
-    rating = Math.round(rating);
-
     return (
         <div className="flex items-center">
             {[...Array(5)].map((e, i) => (

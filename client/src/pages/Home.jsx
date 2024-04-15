@@ -32,7 +32,7 @@ export default function Home() {
                         </p>
                         <div className="flex mt-8">
                             <Link
-                                to="/get-started"
+                                to="/dashboard"
                                 className="btn btn-outline btn-primary mr-3"
                             >
                                 Get Started
