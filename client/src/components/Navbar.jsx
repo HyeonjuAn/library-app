@@ -4,9 +4,9 @@ import SearchBar from "./SearchBar";
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-gray-800">
             <div className="flex-1">
-                <Link href="/" className="btn btn-ghost text-xl">
+                <Link to="/" className="btn btn-ghost text-xl">
                     LibrarySpace.
                 </Link>
             </div>

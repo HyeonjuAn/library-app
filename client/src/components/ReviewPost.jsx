@@ -9,7 +9,7 @@ const ReviewPost = ({ bookISBN }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("http://localhost:80/api/review", {
+            const { data } = await axios.post("/api/review", {
                 isbn: bookISBN,
                 rating: review,
                 reviewer_id: user.id,
