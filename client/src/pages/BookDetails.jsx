@@ -106,7 +106,7 @@ const BookDetails = () => {
                     Genre: {book.genre}
                 </div>
                 <div className="pt-3 text-gray-800 dark:text-white font-black text-xl">
-                    Copies: {book.copies}
+                    Copies: {parseInt(book.copies)}
                 </div>
                 <div className="flex flex-col gap-9 mt-7">
                     <ReviewCard rating={rating} />

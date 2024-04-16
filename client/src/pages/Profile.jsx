@@ -38,7 +38,9 @@ const Profile = () => {
             <Navbar />
             <div className="flex flex-col items-center justify-center py-14">
                 <header className="text-gray-800 dark:text-white font-black text-3xl">
-                    {`${user.Fname} ${user.Minit}. ${user.Lname}`}
+                    {user.Minit
+                        ? `${user.Fname} ${user.Minit}. ${user.Lname}`
+                        : `${user.Fname} ${user.Lname}`}
                 </header>
                 <div className="pt-10 text-gray-800 dark:text-white font-black text-xl">
                     {`${user.email}`}
