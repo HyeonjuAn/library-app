@@ -35,7 +35,7 @@ export default function Home() {
                                 to="/dashboard"
                                 className="btn btn-outline btn-primary mr-3"
                             >
-                                Get Started
+                                Dashboard
                             </Link>
                             <Link to="/login" className="btn btn-primary">
                                 Log In

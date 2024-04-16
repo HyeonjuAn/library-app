@@ -108,7 +108,7 @@ const BookDetails = () => {
                 <div className="pt-3 text-gray-800 dark:text-white font-black text-xl">
                     Copies: {book.copies}
                 </div>
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-9 mt-7">
                     <ReviewCard rating={rating} />
                     <ReviewPost bookISBN={book.ISBN} />
                 </div>

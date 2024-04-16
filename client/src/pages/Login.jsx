@@ -182,6 +182,7 @@ const Login = () => {
                                 id="email"
                                 type="email"
                                 placeholder="Email"
+                                required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
@@ -221,7 +222,7 @@ const Login = () => {
                                 Sign Up
                             </button>
                             <Link
-                                href="#!"
+                                href="/"
                                 className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
                             >
                                 Forgot Password?
@@ -246,6 +247,7 @@ const Login = () => {
                                 type="email"
                                 placeholder="Email"
                                 value={email}
+                                required
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -262,6 +264,7 @@ const Login = () => {
                                 type={isChecked ? "text" : "password"}
                                 placeholder="******************"
                                 value={password}
+                                required
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>

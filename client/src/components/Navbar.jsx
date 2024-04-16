@@ -19,15 +19,15 @@ const Navbar = () => {
                     <div className="flex gap-2">
                         <LogoutButton />
                         <DeleteAccountButton />
+                        <Link to={`/profile/${user.user_id}`} className="btn btn-primary">
+                            Profile
+                        </Link>
                     </div>
                 )}
                 {user && user.is_admin ? (
                     <div className="flex gap-2">
                         <Link to="/add-book" className="btn btn-success">
                             Add Book
-                        </Link>
-                        <Link to={`/profile/${user.user_id}`} className="btn btn-primary">
-                            Profile
                         </Link>
                     </div>
                 ) : (
