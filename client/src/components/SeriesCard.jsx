@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SeriesCard = ({ series }) => {
     return (
         <div className="card bg-base-100 shadow-xl">

@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "../helpers/UserContext";
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
 import DeleteAccountButton from "./DeleteAccountButton";
 import LogoutButton from "./LogoutButton";
 
@@ -31,7 +30,6 @@ const Navbar = () => {
                 ) : (
                     <> </>
                 )}
-                <SearchBar />
             </div>
         </div>
     );

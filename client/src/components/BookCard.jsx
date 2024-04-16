@@ -8,7 +8,7 @@ import { UserContext } from "../helpers/UserContext";
 const BookCard = ({ book, setBooks, books }) => {
     const { user } = useContext(UserContext);
     return (
-        <div className="card w-96 text-neutral-content bg-neutral">
+        <div className="card bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="card-title">{book.title}</h2>
                 <p>{`By: ${book.author}`}</p>
