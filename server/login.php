@@ -3,7 +3,7 @@ require_once 'db.php';
 
 // Set CORS headers
 header("Access-Control-Allow-Origin: http://localhost:3001");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Methods: POST, GET, DELETE");
 header("Access-Control-Allow-Headers: Content-Type");
 
 // Read JSON data from the request body
