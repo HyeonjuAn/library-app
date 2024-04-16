@@ -23,7 +23,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(ISBN, title, genre, copies, author, checked_out_by, series_id);
+(ISBN, title, genre, copies, author, series_id);
 
 -- User generated data, no need for dummy data
 -- Load data for Reviews
