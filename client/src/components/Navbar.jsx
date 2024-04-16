@@ -8,7 +8,7 @@ const Navbar = () => {
     const { user } = useContext(UserContext);
 
     return (
-        <div className="navbar bg-gray-800">
+        <div className="navbar bg-gray-800 fixed z-50">
             <div className="flex-1">
                 <Link to="/" className="btn btn-ghost text-xl">
                     LibrarySpace.
@@ -22,9 +22,12 @@ const Navbar = () => {
                     </div>
                 )}
                 {user && user.is_admin ? (
-                    <div className="flex-none gap-2">
+                    <div className="flex gap-2">
                         <Link to="/add-book" className="btn btn-success">
                             Add Book
+                        </Link>
+                        <Link to={`/profile/${user.user_id}`} className="btn btn-primary">
+                            Profile
                         </Link>
                     </div>
                 ) : (

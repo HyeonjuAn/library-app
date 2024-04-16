@@ -21,7 +21,10 @@ const DeleteBookButton = ({ ISBN, setBooks, books, book }) => {
         };
 
         try {
-            const response = await axios.delete(`/api/book.php`, config);
+            const response = await axios.delete(
+                `/api/book.php?id=${user.user_id}`,
+                config,
+            );
             console.log(response);
             setBooks(books.filter((book) => book.ISBN !== ISBN));
         } catch (error) {

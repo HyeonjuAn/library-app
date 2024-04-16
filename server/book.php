@@ -54,6 +54,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $stmt->bind_param('s', $isbn);
             $stmt->execute();
 
+            $id = isset($_GET['id']) ? $_GET['id'] : null;
+            $activity_type = "Delete Book, ISBN: $isbn";
+            $query = "INSERT INTO Activity (user_id, activity_type) VALUES (?, ?)";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param('is', $id, $activity_type);
+            $stmt->execute();
+ 
             // Check if the book was deleted successfully
             if ($stmt->affected_rows > 0) {
                 $response = ['status' => 'success', 'message' => 'Book deleted successfully'];
@@ -82,6 +89,14 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $stmt->bind_param('ssssss', $isbn, $title, $author, $genre, $copies, $series_id);
             $stmt->execute();
 
+
+            $id = isset($_GET['id']) ? $_GET['id'] : null;
+            $activity_type = "Add Book, ISBN: $isbn";
+            $query = "INSERT INTO Activity (user_id, activity_type) VALUES (?, ?)";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param('is', $id, $activity_type);
+            $stmt->execute();
+
             // Check if the book was added successfully
             if ($stmt->affected_rows > 0) {
                 $response = ['status' => 'success', 'message' => 'Book added successfully'];
@@ -102,7 +117,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $genre = $data['genre'] ?? null;
         $copies = $data['copies'] ?? null;
         $series_id = $data['series_id'] ?? null;
-    
+
+   
         if (!empty($isbn) && (!empty($title) || !empty($author) || !empty($genre) || !empty($copies) || !empty($series_id))) {
             // Prepare an UPDATE statement to update the book in the database
             $query = "UPDATE Book SET title = ?, author = ?, genre = ?, copies = ?, series_id = ? WHERE isbn = ?";
@@ -110,6 +126,14 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $stmt->bind_param('sssiss', $title, $author, $genre, $copies, $series_id, $isbn);
             $stmt->execute();
     
+            $id = isset($_GET['id']) ? $_GET['id'] : null;
+            $activity_type = "Edit Book, ISBN: $isbn";
+            $query = "INSERT INTO Activity (user_id, activity_type) VALUES (?, ?)";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param('is', $id, $activity_type);
+            $stmt->execute();
+ 
+
             // Check if the book was updated successfully
             if ($stmt->affected_rows > 0) {
                 $response = ['status' => 'success', 'message' => 'Book updated successfully'];

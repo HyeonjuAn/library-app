@@ -41,7 +41,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             exit;
         }
     }
+} else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    // Check if the user_id is provided
+    $user_id = isset($_GET['user_id']) ? $_GET['user_id'] : null;
+
+    if (!empty($user_id)) {
+        // Prepare a SELECT statement to fetch the user from the database
+        $stmt = $conn->prepare('SELECT * FROM User WHERE user_id = ?');
+        $stmt->bind_param('i', $user_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        // Check if the user exists
+        if ($result->num_rows === 0) {
+            // Respond with an error if the user does not exist
+            echo json_encode(array('status' => 'error', 'message' => 'User not found'));
+            exit;
+        } else {
+            // Fetch user data
+            $user = $result->fetch_assoc();
+
+            // Respond with success and user data
+            echo json_encode(array('user' => $user, 'status' => 'success', 'message' => 'User fetched successfully'));
+            exit;
+        }
+    } else {
+        // Respond with an error if the user_id is not provided
+        echo json_encode(array('status' => 'error', 'message' => 'User ID is required'));
+        exit;
+    }
 } else {
+    // Respond with an error if the request method is not supported
     echo json_encode(array('status' => 'error', 'message' => 'Invalid request method'));
     exit;
 }

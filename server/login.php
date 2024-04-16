@@ -41,6 +41,10 @@ if ($result->num_rows === 0) {
     // Fetch user data
     $user = $result->fetch_assoc();
 
+    $id = $user['user_id'];
+    $activity_type = "Login";
+    $query = "INSERT INTO Activity (user_id, activity_type) VALUES (?, ?)";
+
     // Respond with success and user data
     echo json_encode(array('user' => $user, 'status' => 'success', 'message' => 'User logged in successfully'));
 }

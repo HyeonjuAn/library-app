@@ -4,11 +4,16 @@ import axios from "axios";
 
 const ReviewPost = ({ bookISBN }) => {
     const { user } = useContext(UserContext);
-    const [review, setReview] = useState(0);
+    const [review, setReview] = useState(2);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            console.log({
+                isbn: bookISBN,
+                rating: review,
+                reviewer_id: user.user_id,
+            });
             const { data } = await axios.post(
                 "/api/review.php",
                 {
@@ -16,6 +21,7 @@ const ReviewPost = ({ bookISBN }) => {
                     rating: review,
                     reviewer_id: user.user_id,
                 },
+                { headers: { "Content-Type": "application/json" } },
                 { withCredentials: true },
             );
             console.log(data);
@@ -26,6 +32,7 @@ const ReviewPost = ({ bookISBN }) => {
 
     useEffect(() => {
         console.log(review);
+        console.log(user);
     }, [review]);
 
     return (

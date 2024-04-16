@@ -23,9 +23,7 @@ CREATE TABLE Book (
     genre VARCHAR(100) NOT NULL,
     copies INT(3) NOT NULL DEFAULT 1,
     author VARCHAR(100) NOT NULL,
-    checked_out_by INT,
     FOREIGN KEY (series_id) REFERENCES Series(series_id) ON DELETE SET NULL ON UPDATE CASCADE,
-    FOREIGN KEY (checked_out_by) REFERENCES User(user_id) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Review (

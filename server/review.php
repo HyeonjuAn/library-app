@@ -20,7 +20,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $isbn = isset($_GET['isbn']) ? $_GET['isbn'] : null;
 
         if ($reviewer_id === 'all') {
-            $sql = "SELECT * FROM Review";
+            $sql = "SELECT * FROM Review WHERE belongs_to_ISBN = '$isbn'";
             $result = $conn->query($sql);
 
             $reviews = [];

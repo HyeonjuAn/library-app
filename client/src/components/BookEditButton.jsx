@@ -78,10 +78,7 @@ const BookEditButton = ({ book, onSave }) => {
             </button>
         </div>
     ) : (
-        <button
-            onClick={() => setEditMode(true)}
-            className="btn btn-success btn-outline"
-        >
+        <button onClick={() => setEditMode(true)} className="btn btn-success">
             Edit
         </button>
     );

@@ -38,7 +38,10 @@ const AddBookForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("/api/book.php", bookDetails);
+            const res = await axios.post(
+                `/api/book.php?id=${user.user_id}`,
+                bookDetails,
+            );
             console.log(res);
             navigate("/dashboard");
         } catch (error) {

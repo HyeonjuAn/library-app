@@ -1,19 +1,20 @@
 import React, { useEffect, useState, useContext } from "react";
+import { UserContext } from "../helpers/UserContext";
+import CheckoutButton from "../components/CheckoutButton";
+import ReturnButton from "../components/ReturnButton";
 import Navbar from "../components/Navbar";
 import BookEditButton from "../components/BookEditButton";
 import ReviewCard from "../components/ReviewCard";
 import ReviewPost from "../components/ReviewPost";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import { UserContext } from "../helpers/UserContext";
 
 const BookDetails = () => {
-    const { isbn } = useParams();
     const { user } = useContext(UserContext);
+    const { isbn } = useParams();
     const [book, setBook] = useState(null);
     const [loading, setLoading] = useState(true);
     const [rating, setRating] = useState(0);
-    const [reviews, setReviews] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -35,10 +36,9 @@ const BookDetails = () => {
                     `/api/review.php?isbn=${isbn}&reviewer_id=all`,
                 );
                 console.log("Fetch Reviews: ", data);
-                setReviews(data.reviews);
                 let sum = 0;
                 for (let i = 0; i < data.reviews.length; i++) {
-                    sum += data.reviews[i].rating;
+                    sum += parseInt(data.reviews[i].rating);
                 }
                 setRating(Math.round(sum / data.reviews.length));
                 setLoading(false);
@@ -54,7 +54,10 @@ const BookDetails = () => {
 
     const handleSaveBookDetails = async (updatedBook) => {
         try {
-            const { data } = await axios.put(`/api/book.php`, updatedBook);
+            const { data } = await axios.put(
+                `/api/book.php?id=${user.user_id}`,
+                updatedBook,
+            );
             console.log("Save response:", data);
             setBook(updatedBook); // Update local state with new book details
         } catch (error) {
@@ -110,18 +113,20 @@ const BookDetails = () => {
                 </div>
                 <div className="flex flex-col gap-3">
                     <ReviewCard rating={rating} />
-                    <ReviewPost bookISBN={book.isbn} />
+                    <ReviewPost bookISBN={book.ISBN} />
                 </div>
                 <div className="py-3">
                     <BookEditButton book={book} onSave={handleSaveBookDetails} />
                 </div>
                 <div className="flex py-3 gap-5 justify-center items-center">
-                    <Link to="/" className="btn btn-primary btn-md">
+                    <Link to="/" className="btn btn-primary btn-md btn-outline ">
                         Home
                     </Link>
-                    <Link to="/dashboard" className="btn btn-primary btn-outline btn-md">
+                    <Link to="/dashboard" className="btn btn-primary btn-md">
                         Go Back
                     </Link>
+                    {user && <CheckoutButton book={book} setBook={setBook} />}
+                    {user && <ReturnButton book={book} setBook={setBook} />}
                 </div>
             </div>
         </div>

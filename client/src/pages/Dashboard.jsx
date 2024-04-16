@@ -52,7 +52,7 @@ const Dashboard = () => {
     return (
         <div className="dark:bg-gray-800 bg-white relative overflow-y-auto h-screen">
             <Navbar />
-            <div className="flex justify-center items-center mt-4 mb-4">
+            <div className="flex justify-center items-center mt-20 mb-4">
                 <label htmlFor="displayType" className="mr-2">
                     Display Type:
                 </label>
